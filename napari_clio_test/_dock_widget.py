@@ -21,9 +21,12 @@ class MyWidget(QWidget):
 
         btn = QPushButton("Click me!")
         btn.clicked.connect(self._on_click)
+        btn2 = QPushButton("Another button!")
+        btn2.clicked.connect(self._on_click)
 
         self.setLayout(QHBoxLayout())
         self.layout().addWidget(btn)
+        self.layout().addWidget(btn2)
 
     def _on_click(self):
         print("napari has", len(self.viewer.layers), "layers")
